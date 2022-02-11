@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/cb7a1c7ec9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/capstone.css">
+    <script src="js/capstone.js"></script>
+    <title>Lisas Kitchen</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Lisa's Kitchen</h1>
+    </header>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Foods
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="dishes.html">Dishes</a></li>
+            <li><a class="dropdown-item active" href="sweets.html">Sweets &amp; Cakes</a></li>
+            <li><a class="dropdown-item" href="bread.html">Breads &amp; Side Dishes</a></li>
+          </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h2>Sweets &amp; Cakes</h2>
+
+<div class="container-fluid container"> 
+  <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/apfelkuchen.jpg" alt="apple pie" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/baby.jpg" alt="baby shower cake" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/beerenwein.jpg" alt="friands" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/berliner.jpg" alt="filled yeast dough" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/birthday2.jpg" alt="Birthday Cake" onclick="openModal();currentSlide(5)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/charlotte.jpg" alt="Charlotte Royale" onclick="openModal();currentSlide(6)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/erdbeertorte.jpg" alt="strawberry cream cake" onclick="openModal();currentSlide(7)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/groot.jpg" alt="Drip Cake with Marvel's Groot" onclick="openModal();currentSlide(8)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/haus.jpg" alt="Gingerbread house" onclick="openModal();currentSlide(9)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/jaconde.jpg" alt="french style cake with berries" onclick="openModal();currentSlide(10)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/japanischerkk.jpg" alt="japanese cheesecake" onclick="openModal();currentSlide(11)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/japanischerkk2.jpg" alt="japanese cheesecake with strawberry dip" onclick="openModal();currentSlide(12)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/käsesahne.jpg" alt="Cream Cake with mandarines" onclick="openModal();currentSlide(13)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/mirror.jpg" alt="mirror glaze cake" onclick="openModal();currentSlide(14)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/maulwurf.2jpg" alt="mole cake with bananas" onclick="openModal();currentSlide(15)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/papagei.jpg" alt="Parrot Cake (fondant)" onclick="openModal();currentSlide(16)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/pralinen.jpg" alt="chocolate candy" onclick="openModal();currentSlide(17)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/windbeutel.jpg" alt="cream puffs" onclick="openModal();currentSlide(18)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 18</div>
+      <img src="imgs/apfelkuchen.jpg" alt="apple pie">
+      <div class="slides slide-caption">Apple Pie with crumble</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 18</div>
+      <img src="imgs/baby.jpg" alt="baby shower cake">
+      <div class="slides slide-caption">Baby Shower: Boy or Girl?</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 18</div>
+      <img src="imgs/beerenwein.jpg" alt="friands">
+      <div class="slides slide-caption">French Cakes called Friands with wine and berries</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 18</div>
+      <img src="imgs/berliner.jpg" alt="filled yeast dough">
+      <div class="slides slide-caption">filled yeast dough</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 18</div>
+      <img src="imgs/birthday2.jpg" alt="Birthday Cake">
+      <div class="slides slide-caption">Chocolate-Nut-Cake (birthday cake)</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 18</div>
+      <img src="imgs/charlotte.jpg" alt="Charlotte Royale">
+      <div class="slides slide-caption">Charlotte Royale</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 18</div>
+      <img src="imgs/erdbeertorte.jpg" alt="strawberry cream cake">
+      <div class="slides slide-caption">strawberry cream cake</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 18</div>
+      <img src="imgs/groot.jpg" alt="Drip Cake with Marvel's Groot">
+      <div class="slides slide-caption">Salted caramel Drip Cake with Marvel's Groot</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 18</div>
+      <img src="imgs/haus.jpg" alt="Gingerbread house">
+      <div class="slides slide-caption">Gingerbread House - very hard job!</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 18</div>
+      <img  src="imgs/jaconde.jpg" alt="french style cake with berries">
+      <div class="slides slide-caption">french style cake with berries</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 18</div>
+      <img src="imgs/japanischerkk.jpg" alt="japanese cheesecake">
+      <div class="slides slide-caption">fluffy japanese cheesecake</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 18</div>
+      <img src="imgs/japanischerkk2.jpg" alt="japanese cheesecake with strawberry dip">
+      <div class="slides slide-caption">japanese cheesecake with strawberry dip</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">13 / 18</div>
+      <img src="imgs/käsesahne.jpg" alt="Cream Cake with mandarines">
+      <div class="slides slide-caption">Cream Cake with mandarines</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">14 / 18</div>
+      <img src="imgs/mirror.jpg" alt="mirror glaze cake">
+      <div class="slides slide-caption">Mirror Glaze Cake</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">15 / 18</div>
+      <img src="imgs/maulwurf.2jpg" alt="mole cake with bananas">
+      <div class="slides slide-caption">mole cake with bananas</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">16 / 18</div>
+      <img src="imgs/papagei.jpg" alt="Parrot Cake (fondant)">
+      <div class="slides slide-caption">Parrot Style Cake with Fondant</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">17 / 18</div>
+      <img src="imgs/pralinen.jpg" alt="chocolate candy">
+      <div class="slides slide-caption">selfmade chocolate candy</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">18 / 18</div>
+      <img src="imgs/windbeutel.jpg" alt="cream puffs">
+      <div class="slides slide-caption">Cream Puffs with berries</div>
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+   
+  </div>
+</div>
+
+</div>
+
+    <footer>- LisaKn / 2022 -</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

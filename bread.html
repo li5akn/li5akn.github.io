@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/cb7a1c7ec9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/capstone.css">
+    <script src="js/capstone.js"></script>
+    <title>Lisas Kitchen</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Lisa's Kitchen</h1>
+    </header>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Foods
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-current="page" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="dishes.html">Dishes</a></li>
+            <li><a class="dropdown-item" href="sweets.html">Sweets &amp; Cakes</a></li>
+            <li><a class="dropdown-item active" href="bread.html">Breads &amp; Side Dishes</a></li>
+          </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<h2>Breads &amp; Side Dishes</h2>
+
+<div class="container-fluid container"> 
+  <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/brezel.jpg" alt="pretzels" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/brezel1.jpg" alt="pretzels with dip" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/brot.jpg" alt="bread" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/brot1.jpg" alt="bread" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/brot3.jpg" alt="bread" onclick="openModal();currentSlide(5)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/kraut.jpg" alt="herbs" onclick="openModal();currentSlide(6)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/kuerbis.jpg" alt="Jack O'Lantern" onclick="openModal();currentSlide(7)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/käseknoedel.jpg" alt="cheese dumplings" onclick="openModal();currentSlide(8)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/pastafresh.jpg" alt="fresh pasta" onclick="openModal();currentSlide(9)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/pizzabroetchen.jpg" alt="pizza rolls" onclick="openModal();currentSlide(10)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/salate.jpg" alt="salads" onclick="openModal();currentSlide(11)" class="hover-shadow">
+  </div>
+  <div class="column d-inline-block col-sm-6 col-md-4 col-lg-3">
+    <img src="imgs/semmelknoedel.jpg" alt="bread dumplings" onclick="openModal();currentSlide(12)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="imgs/brezel.jpg" alt="pretzels">
+      <div class="slides slide-caption">selfmade german pretzels</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="imgs/brezel1.jpg" alt="pretzels with dip">
+      <div class="slides slide-caption">Pretzels with different Dips</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="imgs/brot.jpg" alt="bread">
+      <div class="slides slide-caption">Bread (rye &amp; wheat)</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="imgs/brot1.jpg" alt="bread">
+      <div class="slides slide-caption">Bread with Buttermilk</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="imgs/brot3.jpg" alt="bread">
+      <div class="slides slide-caption">bread 100% rye</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="imgs/kraut.jpg" alt="selfmade Pizza">
+      <div class="slides slide-caption">Herbs in my Garden</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="imgs/kuerbis.jpg" alt="Jack O'Lantern">
+      <div class="slides slide-caption">Not really for eating, but my first one and I love it</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="imgs/käseknoedel.jpg" alt="Cheese dumplings">
+      <div class="slides slide-caption">Austrian Cheese Dumplings</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <img src="imgs/pastafresh.jpg" alt="fresh pasta">
+      <div class="slides slide-caption">Drying fresh Pasta</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <img src="imgs/pizzabroetchen.jpg" alt="Pizza Rolls">
+      <div class="slides slide-caption">Pizza Rolls, best to eat at movie night</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <img src="imgs/salate.jpg" alt="salads">
+      <div class="slides slide-caption">Tomatoe Salad &amp; Potatoe Salad</div>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <img src="imgs/semmelknoedel.jpg" alt="potatoe soup">
+      <div class="slides slide-caption">Classic german bread Dumplings</div>
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+   
+  </div>
+</div>
+
+</div>
+
+    <footer>- LisaKn / 2022 -</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
